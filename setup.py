@@ -6,6 +6,7 @@ with open("README.md", "r", encoding="utf-8") as f:
 ## edit below variables as per your requirements -
 REPO_NAME = "DVC-Demo-1"
 AUTHOR_USER_NAME = "Samm-G"
+AUTHOR_EMAIL = "gsamarth97@gmail.com"
 SRC_REPO = "src"
 LIST_OF_REQUIREMENTS = []
 
@@ -18,7 +19,7 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url=f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}",
-    author_email="sunny.c17hawke@gmail.com",
+    author_email=AUTHOR_EMAIL,
     packages=[SRC_REPO],
     license="MIT",
     python_requires=">=3.6",
