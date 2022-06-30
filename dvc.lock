@@ -13,3 +13,22 @@ stages:
     - path: artifacts/raw_local_dir/data.csv
       md5: 7d814a1bda02145efe703f4e1c01847a
       size: 93599
+  split_data:
+    cmd: python src/stage_02_split_data.py
+    deps:
+    - path: artifacts/raw_local_dir/data.csv
+      md5: 7d814a1bda02145efe703f4e1c01847a
+      size: 93599
+    - path: src/stage_02_split_data.py
+      md5: 7ce2c1162e92a3532732b11576199d53
+      size: 2530
+    - path: src/utils/common.py
+      md5: 5cde943b33d657763bb3b6f47bdb3bd3
+      size: 806
+    outs:
+    - path: artifacts/split_data_dir/test.csv
+      md5: 24231d9912c448986090b9123611c474
+      size: 28174
+    - path: artifacts/split_data_dir/train.csv
+      md5: af902cb26b43434b461753342bbb2aa9
+      size: 65572
