@@ -1,0 +1,15 @@
+schema: '2.0'
+stages:
+  get_data:
+    cmd: python src/stage_01_load_save.py
+    deps:
+    - path: src/stage_01_load_save.py
+      md5: 5d28a9951f2567501229c2d8694cb643
+      size: 1700
+    - path: src/utils/common.py
+      md5: 5cde943b33d657763bb3b6f47bdb3bd3
+      size: 806
+    outs:
+    - path: artifacts/raw_local_dir/data.csv
+      md5: 7d814a1bda02145efe703f4e1c01847a
+      size: 93599
