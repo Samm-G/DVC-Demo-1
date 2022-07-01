@@ -60,16 +60,16 @@ stages:
     params:
       params.yaml:
         model_params.ElasticNet.alpha: 0.7
-        model_params.ElasticNet.l1_ratio: 0.5
+        model_params.ElasticNet.l1_ratio: 0.7
     outs:
     - path: artifacts/model_dir/model.pkl
-      md5: e8986846c63badbec840b83e0a341fcc
+      md5: 9b1f903a8bc0e1b93d3a03c2a5f7f065
       size: 1198
   evaluate:
     cmd: python src/stage_04_evaluate.py
     deps:
     - path: artifacts/model_dir/model.pkl
-      md5: e8986846c63badbec840b83e0a341fcc
+      md5: 9b1f903a8bc0e1b93d3a03c2a5f7f065
       size: 1198
     - path: artifacts/split_data_dir/test.csv
       md5: 8fc46bc8a1c5a8690a4931ca4d23060a
@@ -85,5 +85,5 @@ stages:
       size: 806
     outs:
     - path: scores.json
-      md5: c97d37a2e02299eeda3cddf07559f037
+      md5: 69f96e475af7d1d5b35aeccd82b0f0ec
       size: 106
