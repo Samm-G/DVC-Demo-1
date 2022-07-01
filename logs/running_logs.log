@@ -1,0 +1,102 @@
+[2022-07-01 18:37:47,673: INFO: stage_01_load_save]: 
+********************
+[2022-07-01 18:37:47,673: INFO: stage_01_load_save]: >>>>> stage GET DATA started <<<<<
+[2022-07-01 18:37:47,674: ERROR: stage_01_load_save]: 'Namespace' object has no attribute 'params'
+Traceback (most recent call last):
+  File "src/stage_01_load_save.py", line 56, in <module>
+    main(config_path=parsed_args.config, params_path=parsed_args.params)
+AttributeError: 'Namespace' object has no attribute 'params'
+[2022-07-01 18:38:24,709: INFO: stage_01_load_save]: 
+********************
+[2022-07-01 18:38:24,709: INFO: stage_01_load_save]: >>>>> stage GET DATA started <<<<<
+[2022-07-01 18:38:24,711: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-07-01 18:38:26,830: INFO: common]: created directory at: artifacts\raw_local_dir
+[2022-07-01 18:38:26,847: INFO: stage_01_load_save]: Data saved at path: artifacts\raw_local_dir\data.csv
+[2022-07-01 18:38:26,847: INFO: stage_01_load_save]: >>>>> stage GET DATA completed!<<<<<
+
+[2022-07-01 18:38:29,464: INFO: stage_02_split_data]: 
+********************
+[2022-07-01 18:38:29,464: INFO: stage_02_split_data]: >>>>> stage SPLIT DATA started <<<<<
+[2022-07-01 18:38:29,469: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-07-01 18:38:29,472: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-07-01 18:38:29,472: INFO: stage_02_split_data]: Data saved at path: artifacts\raw_local_dir\data.csv
+[2022-07-01 18:38:29,488: INFO: stage_02_split_data]: Splitting of data in training and test files. Split ratio has a test size of 0.3
+[2022-07-01 18:38:29,489: INFO: common]: created directory at: artifacts\split_data_dir
+[2022-07-01 18:38:29,507: INFO: stage_02_split_data]: Data is saved at: artifacts\split_data_dir\train.csv
+[2022-07-01 18:38:29,515: INFO: stage_02_split_data]: Data is saved at: artifacts\split_data_dir\test.csv
+[2022-07-01 18:38:29,516: INFO: stage_02_split_data]: >>>>> stage SPLIT DATA completed!<<<<<
+
+[2022-07-01 18:38:32,265: INFO: stage_03_train]: 
+********************
+[2022-07-01 18:38:32,265: INFO: stage_03_train]: >>>>> stage TRAINING started <<<<<
+[2022-07-01 18:38:32,267: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-07-01 18:38:32,268: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-07-01 18:38:32,269: INFO: common]: created directory at: artifacts\model_dir
+[2022-07-01 18:38:32,298: INFO: stage_03_train]: Model is trained and saved at: artifacts\model_dir\model.pkl
+[2022-07-01 18:38:32,299: INFO: stage_03_train]: >>>>> stage TRAINING completed!<<<<<
+
+[2022-07-01 18:38:34,757: INFO: stage_04_evaluate]: 
+********************
+[2022-07-01 18:38:34,757: INFO: stage_04_evaluate]: >>>>> stage EVAULATE started <<<<<
+[2022-07-01 18:38:34,760: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-07-01 18:38:34,760: INFO: common]: created directory at: artifacts\model_dir
+[2022-07-01 18:38:34,823: INFO: common]: json file saved at: scores.json
+[2022-07-01 18:38:34,824: INFO: stage_04_evaluate]: Scores are evaluated and saved at saved at: scores.json
+[2022-07-01 18:38:34,824: INFO: stage_04_evaluate]: >>>>> stage EVAULATE completed!<<<<<
+
+[2022-07-01 18:39:45,113: INFO: stage_03_train]: 
+********************
+[2022-07-01 18:39:45,113: INFO: stage_03_train]: >>>>> stage TRAINING started <<<<<
+[2022-07-01 18:39:45,116: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-07-01 18:39:45,117: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-07-01 18:39:45,117: INFO: common]: created directory at: artifacts\model_dir
+[2022-07-01 18:39:45,128: INFO: stage_03_train]: Model is trained and saved at: artifacts\model_dir\model.pkl
+[2022-07-01 18:39:45,128: INFO: stage_03_train]: >>>>> stage TRAINING completed!<<<<<
+
+[2022-07-01 18:39:47,387: INFO: stage_04_evaluate]: 
+********************
+[2022-07-01 18:39:47,387: INFO: stage_04_evaluate]: >>>>> stage EVAULATE started <<<<<
+[2022-07-01 18:39:47,389: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-07-01 18:39:47,390: INFO: common]: created directory at: artifacts\model_dir
+[2022-07-01 18:39:47,442: INFO: common]: json file saved at: scores.json
+[2022-07-01 18:39:47,443: INFO: stage_04_evaluate]: Scores are evaluated and saved at saved at: scores.json
+[2022-07-01 18:39:47,443: INFO: stage_04_evaluate]: >>>>> stage EVAULATE completed!<<<<<
+
+[2022-07-01 18:57:08,392: INFO: stage_01_load_save]: 
+********************
+[2022-07-01 18:57:08,392: INFO: stage_01_load_save]: >>>>> stage GET DATA started <<<<<
+[2022-07-01 18:57:08,395: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-07-01 18:57:10,466: INFO: common]: created directory at: artifacts\raw_local_dir
+[2022-07-01 18:57:10,482: INFO: stage_01_load_save]: Data saved at path: artifacts\raw_local_dir\data.csv
+[2022-07-01 18:57:10,482: INFO: stage_01_load_save]: >>>>> stage GET DATA completed!<<<<<
+
+[2022-07-01 18:57:12,881: INFO: stage_02_split_data]: 
+********************
+[2022-07-01 18:57:12,881: INFO: stage_02_split_data]: >>>>> stage SPLIT DATA started <<<<<
+[2022-07-01 18:57:12,884: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-07-01 18:57:12,885: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-07-01 18:57:12,886: INFO: stage_02_split_data]: Data saved at path: artifacts\raw_local_dir\data.csv
+[2022-07-01 18:57:12,895: INFO: stage_02_split_data]: Splitting of data in training and test files. Split ratio has a test size of 0.3
+[2022-07-01 18:57:12,895: INFO: common]: created directory at: artifacts\split_data_dir
+[2022-07-01 18:57:12,907: INFO: stage_02_split_data]: Data is saved at: artifacts\split_data_dir\train.csv
+[2022-07-01 18:57:12,914: INFO: stage_02_split_data]: Data is saved at: artifacts\split_data_dir\test.csv
+[2022-07-01 18:57:12,914: INFO: stage_02_split_data]: >>>>> stage SPLIT DATA completed!<<<<<
+
+[2022-07-01 18:57:15,194: INFO: stage_03_train]: 
+********************
+[2022-07-01 18:57:15,194: INFO: stage_03_train]: >>>>> stage TRAINING started <<<<<
+[2022-07-01 18:57:15,196: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-07-01 18:57:15,198: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-07-01 18:57:15,198: INFO: common]: created directory at: artifacts\model_dir
+[2022-07-01 18:57:15,211: INFO: stage_03_train]: Model is trained and saved at: artifacts\model_dir\model.pkl
+[2022-07-01 18:57:15,211: INFO: stage_03_train]: >>>>> stage TRAINING completed!<<<<<
+
+[2022-07-01 18:57:17,455: INFO: stage_04_evaluate]: 
+********************
+[2022-07-01 18:57:17,456: INFO: stage_04_evaluate]: >>>>> stage EVAULATE started <<<<<
+[2022-07-01 18:57:17,458: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-07-01 18:57:17,458: INFO: common]: created directory at: artifacts\model_dir
+[2022-07-01 18:57:17,510: INFO: common]: json file saved at: scores.json
+[2022-07-01 18:57:17,510: INFO: stage_04_evaluate]: Scores are evaluated and saved at saved at: scores.json
+[2022-07-01 18:57:17,510: INFO: stage_04_evaluate]: >>>>> stage EVAULATE completed!<<<<<
+

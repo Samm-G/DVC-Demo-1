@@ -139,7 +139,7 @@ dmypy.json
 configs/secrets.yaml
 
 # Logs ignore.
-/**/*.log
+# /**/*.log
 
 # add your env folder here if its there
 
