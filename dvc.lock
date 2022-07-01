@@ -4,8 +4,8 @@ stages:
     cmd: python src/stage_01_load_save.py
     deps:
     - path: src/stage_01_load_save.py
-      md5: 5d28a9951f2567501229c2d8694cb643
-      size: 1700
+      md5: 92cb5458cdc3e5c74b408843b10b4239
+      size: 1698
     - path: src/utils/common.py
       md5: 5cde943b33d657763bb3b6f47bdb3bd3
       size: 806
@@ -27,8 +27,27 @@ stages:
       size: 806
     outs:
     - path: artifacts/split_data_dir/test.csv
-      md5: 24231d9912c448986090b9123611c474
-      size: 28174
+      md5: 6969bebe0b802848ec2fb45ddbb94dde
+      size: 28176
     - path: artifacts/split_data_dir/train.csv
-      md5: af902cb26b43434b461753342bbb2aa9
-      size: 65572
+      md5: cc269a42418c95ca73b9c6aa13558b6c
+      size: 65570
+  train_data:
+    cmd: python src/stage_03_train.py
+    deps:
+    - path: artifacts/split_data_dir/test.csv
+      md5: 6969bebe0b802848ec2fb45ddbb94dde
+      size: 28176
+    - path: artifacts/split_data_dir/train.csv
+      md5: cc269a42418c95ca73b9c6aa13558b6c
+      size: 65570
+    - path: src/stage_03_train.py
+      md5: 8f0294518d5c4c44067fa056bd2bd1e0
+      size: 2460
+    - path: src/utils/common.py
+      md5: 5cde943b33d657763bb3b6f47bdb3bd3
+      size: 806
+    outs:
+    - path: artifacts/model_dir/model.pkl
+      md5: 7611afda19a0b78fe06c0bf68729657c
+      size: 1198

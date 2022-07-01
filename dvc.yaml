@@ -1,5 +1,6 @@
 # add stages here 
 stages:
+
   get_data:
     cmd: python src/stage_01_load_save.py
     deps:
@@ -7,6 +8,7 @@ stages:
     - src/utils/common.py
     outs:
     - artifacts/raw_local_dir/data.csv
+
   split_data:
     cmd: python src/stage_02_split_data.py
     deps:
@@ -16,3 +18,13 @@ stages:
     outs:
     - artifacts/split_data_dir/train.csv
     - artifacts/split_data_dir/test.csv
+
+  train_data:
+    cmd: python src/stage_03_train.py
+    deps:
+    - src/stage_03_train.py
+    - src/utils/common.py
+    - artifacts/split_data_dir/test.csv
+    - artifacts/split_data_dir/train.csv
+    outs:
+    - artifacts/model_dir/model.pkl

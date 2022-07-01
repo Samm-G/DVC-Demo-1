@@ -138,6 +138,9 @@ dmypy.json
 # add secret keys or API keys here
 configs/secrets.yaml
 
+# Logs ignore.
+/**/*.log
+
 # add your env folder here if its there
 
 

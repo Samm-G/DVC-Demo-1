@@ -25,7 +25,7 @@ def main(config_path):
     # Read data from remote URL..
     remote_data_URL = config['data_source']
     df = pd.read_csv(remote_data_URL, sep=';')
-    print(df.head())
+    # print(df.head())
 
     # Get artifacts dir..
     artifacts = config['artifacts']
@@ -41,7 +41,7 @@ def main(config_path):
     df.to_csv(raw_local_filepath,sep=',',index=False)
     
     logging.info(f'Data saved at path: {raw_local_filepath}')
-    
+
     pass
 
 
