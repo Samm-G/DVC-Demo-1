@@ -9,5 +9,5 @@ model_params:
     # l1_ratio: 0.5
     # alpha: 0.7
     # l1_ratio: 0.5
-    alpha: 0.7
-    l1_ratio: 0.7
+    alpha: 0.5
+    l1_ratio: 0.9
