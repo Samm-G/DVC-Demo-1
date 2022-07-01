@@ -3,9 +3,12 @@ stages:
   get_data:
     cmd: python src/stage_01_load_save.py
     deps:
+    - path: configs/config.yaml
+      md5: 4d051b0ff477ecb1ac1c9d91b34cb90c
+      size: 409
     - path: src/stage_01_load_save.py
-      md5: 92cb5458cdc3e5c74b408843b10b4239
-      size: 1698
+      md5: ef0160aeac1404984dcb521c752d426b
+      size: 1807
     - path: src/utils/common.py
       md5: 5cde943b33d657763bb3b6f47bdb3bd3
       size: 806
@@ -19,51 +22,68 @@ stages:
     - path: artifacts/raw_local_dir/data.csv
       md5: 7d814a1bda02145efe703f4e1c01847a
       size: 93599
+    - path: configs/config.yaml
+      md5: 4d051b0ff477ecb1ac1c9d91b34cb90c
+      size: 409
     - path: src/stage_02_split_data.py
       md5: 7ce2c1162e92a3532732b11576199d53
       size: 2530
     - path: src/utils/common.py
       md5: 5cde943b33d657763bb3b6f47bdb3bd3
       size: 806
+    params:
+      params.yaml:
+        base.random_state: 42
+        base.test_size: 0.3
     outs:
     - path: artifacts/split_data_dir/test.csv
-      md5: b060ffecce6cf54397d6d68a23de4c9c
-      size: 28169
+      md5: 8fc46bc8a1c5a8690a4931ca4d23060a
+      size: 28197
     - path: artifacts/split_data_dir/train.csv
-      md5: 72783c4135bdd7a99e4e88377bf23226
-      size: 65577
+      md5: 3591a5c846f04ec5194f5d3c45d562e6
+      size: 65549
   train_data:
     cmd: python src/stage_03_train.py
     deps:
     - path: artifacts/split_data_dir/train.csv
-      md5: 72783c4135bdd7a99e4e88377bf23226
-      size: 65577
+      md5: 3591a5c846f04ec5194f5d3c45d562e6
+      size: 65549
+    - path: configs/config.yaml
+      md5: 4d051b0ff477ecb1ac1c9d91b34cb90c
+      size: 409
     - path: src/stage_03_train.py
       md5: 8f0294518d5c4c44067fa056bd2bd1e0
       size: 2460
     - path: src/utils/common.py
       md5: 5cde943b33d657763bb3b6f47bdb3bd3
       size: 806
+    params:
+      params.yaml:
+        model_params.ElasticNet.alpha: 0.7
+        model_params.ElasticNet.l1_ratio: 0.5
     outs:
     - path: artifacts/model_dir/model.pkl
-      md5: c45fda13723a4050685a9c77ac7cbe51
+      md5: e8986846c63badbec840b83e0a341fcc
       size: 1198
   evaluate:
     cmd: python src/stage_04_evaluate.py
     deps:
     - path: artifacts/model_dir/model.pkl
-      md5: c45fda13723a4050685a9c77ac7cbe51
+      md5: e8986846c63badbec840b83e0a341fcc
       size: 1198
     - path: artifacts/split_data_dir/test.csv
-      md5: b060ffecce6cf54397d6d68a23de4c9c
-      size: 28169
+      md5: 8fc46bc8a1c5a8690a4931ca4d23060a
+      size: 28197
+    - path: configs/config.yaml
+      md5: 4d051b0ff477ecb1ac1c9d91b34cb90c
+      size: 409
     - path: src/stage_04_evaluate.py
-      md5: 1bd056c5d47fd7b5a06ff16479494721
-      size: 2726
+      md5: a85b57334f4cb6dc8b11749b030c7545
+      size: 2683
     - path: src/utils/common.py
       md5: 5cde943b33d657763bb3b6f47bdb3bd3
       size: 806
     outs:
     - path: scores.json
-      md5: b27818834911d45cf8ad51ebf71ac69a
-      size: 105
+      md5: c97d37a2e02299eeda3cddf07559f037
+      size: 106
