@@ -14,7 +14,7 @@ jobs:
           python-version: '3.8'
 
       - name: cml-run
-        env: 
+        env:
           repo_token: ${{ secrets._GITHUB_TOKEN }}
         run: |
           # Your ML wokflow commands

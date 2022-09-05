@@ -100,3 +100,33 @@ AttributeError: 'Namespace' object has no attribute 'params'
 [2022-07-01 18:57:17,510: INFO: stage_04_evaluate]: Scores are evaluated and saved at saved at: scores.json
 [2022-07-01 18:57:17,510: INFO: stage_04_evaluate]: >>>>> stage EVAULATE completed!<<<<<
 
+[2022-09-05 19:08:52,982: INFO: stage_02_split_data]: 
+********************
+[2022-09-05 19:08:52,982: INFO: stage_02_split_data]: >>>>> stage SPLIT DATA started <<<<<
+[2022-09-05 19:08:52,986: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-09-05 19:08:52,988: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-09-05 19:08:52,988: INFO: stage_02_split_data]: Data saved at path: artifacts\raw_local_dir\data.csv
+[2022-09-05 19:08:53,008: INFO: stage_02_split_data]: Splitting of data in training and test files. Split ratio has a test size of 0.3
+[2022-09-05 19:08:53,009: INFO: common]: created directory at: artifacts\split_data_dir
+[2022-09-05 19:08:53,030: INFO: stage_02_split_data]: Data is saved at: artifacts\split_data_dir\train.csv
+[2022-09-05 19:08:53,040: INFO: stage_02_split_data]: Data is saved at: artifacts\split_data_dir\test.csv
+[2022-09-05 19:08:53,040: INFO: stage_02_split_data]: >>>>> stage SPLIT DATA completed!<<<<<
+
+[2022-09-05 19:08:56,525: INFO: stage_03_train]: 
+********************
+[2022-09-05 19:08:56,525: INFO: stage_03_train]: >>>>> stage TRAINING started <<<<<
+[2022-09-05 19:08:56,528: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-09-05 19:08:56,531: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-09-05 19:08:56,532: INFO: common]: created directory at: artifacts\model_dir
+[2022-09-05 19:08:56,563: INFO: stage_03_train]: Model is trained and saved at: artifacts\model_dir\model.pkl
+[2022-09-05 19:08:56,563: INFO: stage_03_train]: >>>>> stage TRAINING completed!<<<<<
+
+[2022-09-05 19:08:59,773: INFO: stage_04_evaluate]: 
+********************
+[2022-09-05 19:08:59,773: INFO: stage_04_evaluate]: >>>>> stage EVAULATE started <<<<<
+[2022-09-05 19:08:59,776: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-09-05 19:08:59,777: INFO: common]: created directory at: artifacts\model_dir
+[2022-09-05 19:08:59,857: INFO: common]: json file saved at: scores.json
+[2022-09-05 19:08:59,857: INFO: stage_04_evaluate]: Scores are evaluated and saved at saved at: scores.json
+[2022-09-05 19:08:59,857: INFO: stage_04_evaluate]: >>>>> stage EVAULATE completed!<<<<<
+
